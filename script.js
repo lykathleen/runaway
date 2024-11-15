@@ -1,5 +1,4 @@
-// Select the image by its ID
-const image = document.getElementById("runawayImage");
+const image = document.getElementById("flyingPanda");
 
 image.addEventListener("mouseover", () => {
   // Get the dimensions of the viewport and the image
@@ -14,4 +13,11 @@ image.addEventListener("mouseover", () => {
 
   // Move the image to the new position
   image.style.transform = `translate(${newX}px, ${newY}px)`;
+
+  const isPastHalfway = newX + imageWidth / 2 > containerWidth / 2;
+  if (isPastHalfway) {
+    image.style.transform += " scaleX(-1)"; // Flip horizontally
+  } else {
+    image.style.transform = `translate(${newX}px, ${newY}px)`; // Reset the flip
+  }
 });

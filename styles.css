@@ -14,11 +14,31 @@ html {
   position: relative;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#flyingPanda {
+  position: absolute; /* Allows it to be moved */
+  top: 50px;
+  left: 50px;
+  transition: transform 0.3s ease-in-out; /* Smooth movement */
+}
+
+.center-text {
+  position: absolute;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  z-index: 1;
 }
 
 #runawayImage {
   position: absolute;
   cursor: pointer;
   transition: transform 0.2s;
-  width: 100px; /* Adjust as needed */
+  width: 100px; /* Adjust size as needed */
+  z-index: 0;
 }
