@@ -26,7 +26,7 @@ html {
   position: absolute;
   top: 50px;
   left: 50px;
-  width: 15vw; /* Use 15% of viewport width for desktops */
+  width: 10vw; /* Use 15% of viewport width for desktops */
   height: auto;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
